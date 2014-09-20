@@ -1,0 +1,169 @@
+"""Import many modules from Python.
+
+Description
+-----------
+
+Liberate (polute?) your namespace with some basic modules, 
+classes and functions.
+
+
+Modules, classes and functions
+------------------------------
+base64
+BeautifulSoup
+ConfigParser
+json
+pickle
+
+re, findall, search, sub, subn
+
+
+Conditional import (only if installed)
+--------------------------------------
+nltk, sent_tokenize, word_tokenize
+
+pandas as pd, DataFrame, read_csv, Series
+
+pylab (everything by 'from pylab import *')
+
+"""
+
+__author__ = 'Finn Aarup Nielsen'
+
+
+# We put this at the top. Do we get any collisions?
+try:
+    from pylab import *
+except ImportError:
+    pass
+
+import base64
+from base64 import b16decode, b16encode, b32decode, b32encode, \
+    b64decode, b64encode, urlsafe_b64decode, urlsafe_b64encode
+
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    pass
+
+import bz2
+
+from collections import Container, Counter, defaultdict, deque, \
+    Iterable, Mapping, namedtuple, OrderedDict, Sequence, Sized
+
+try:
+    from ConfigParser import ConfigParser
+except ImportError:
+    from configparser import ConfigParser
+
+from copy import copy, deepcopy
+
+from datetime import date, datetime, timedelta
+
+from decimal import Decimal
+
+from fnmatch import fnmatch, fnmatchcase
+
+from functools import partial, wraps
+
+from glob import glob
+
+import gzip
+
+import heapq
+
+import itertools
+from itertools import count, cycle, repeat, chain, dropwhile, groupby, \
+    islice, starmap, tee, takewhile, \
+    product, permutations, combinations, \
+    combinations_with_replacement
+try:
+    # Python 3 does not have these functions.
+    from itertools import ifilter, ifilterfalse, imap, izip, izip_longest
+    zip_longest = izip_longest
+except ImportError:
+    try:
+        from itertools import zip_longest
+        izip_longest = zip_longest
+        izip = zip
+        imap = map
+    except ImportError:
+        raise
+
+import json
+
+# >>> import pylab, math
+# >>> set(dir(math)) - set(dir(pylab))
+# set(['asin', 'asinh', 'atanh', 'atan', 'atan2', 'factorial', 
+#      'pow', 'fsum', 'lgamma', 'erf', 'erfc', 'acosh', 'acos'])
+try:
+    # Numpy's version should work on complex numbers so no need of cmath
+    asin = arcsin
+    asinh = arcsinh
+    atanh = arctanh
+    atan = arctan
+    atan2 = arctan2
+    acosh = arccosh
+    acos = arccos
+except NameError:
+    from math import *
+
+try:
+    import nltk
+    from nltk import sent_tokenize, word_tokenize
+except ImportError:
+    pass
+
+from operator import attrgetter, itemgetter
+
+from os import chdir, chmod, getcwd, listdir, walk
+from os.path import abspath, basename, dirname, exists, expanduser, isdir, \
+    isfile, islink, realpath, splitext
+from os.path import join as pjoin # maybe join? No apparent collisions
+
+try:
+    import pandas as pd
+    from pandas import DataFrame, DataFrame, read_excel, read_csv, \
+        Panel, Panel4D, Series
+except ImportError:
+    pass
+
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+
+from pprint import pprint
+
+import re
+from re import compile, DOTALL, findall, IGNORECASE, match, MULTILINE, \
+    search, split, sub, subn, UNICODE, VERBOSE
+
+try:
+    import requests
+except ImportError:
+    # Should we import urllib?
+    pass
+
+try:
+    from cStringIO import StringIO
+except ImportError:
+    try:
+        from StringIO import StringIO
+    except ImportError:
+        from io import StringIO
+
+import struct
+
+import sys
+
+import time
+
+from timeit import timeit
+
+try:
+    from lxml import etree
+except ImportError:
+    from xml import etree
+
+import zlib
