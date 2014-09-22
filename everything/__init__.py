@@ -110,7 +110,7 @@ except NameError:
 
 try:
     import nltk
-    from nltk import sent_tokenize, word_tokenize
+    from nltk import bigrams, pos_tag, sent_tokenize, word_tokenize
 except ImportError:
     pass
 
@@ -123,7 +123,7 @@ from os.path import join as pjoin # maybe join? No apparent collisions
 
 try:
     import pandas as pd
-    from pandas import DataFrame, DataFrame, read_excel, read_csv, \
+    from pandas import DataFrame, read_excel, read_csv, \
         Panel, Panel4D, Series
 except ImportError:
     pass
@@ -135,9 +135,11 @@ except ImportError:
 
 from pprint import pprint
 
+# re.compile should not hide __builtins__.compile
+# re.split should not hide split from pylab
 import re
-from re import compile, DOTALL, findall, IGNORECASE, match, MULTILINE, \
-    search, split, sub, subn, UNICODE, VERBOSE
+from re import DOTALL, findall, IGNORECASE, match, MULTILINE, \
+    search, sub, subn, UNICODE, VERBOSE
 
 try:
     import requests
@@ -154,6 +156,7 @@ except ImportError:
         from io import StringIO
 
 import struct
+from struct import pack, unpack
 
 import sys
 
