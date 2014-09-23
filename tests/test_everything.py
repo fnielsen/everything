@@ -7,8 +7,7 @@ def test_collections():
 
 
 def test_itertools():
-    assert type(zip_longest((1,), (1, 2))) == list
-    assert zip_longest((1,), (1, 2)) == [(1, 1), (None, 2)]
+    assert list(zip_longest((1,), (1, 2))) == [(1, 1), (None, 2)]
 
 
 def test_nltk():
