@@ -1,30 +1,46 @@
-"""Import many modules from Python.
+"""Literate your namespace! Import many modules from Python. 
 
 Description
 -----------
+Import many names (modules, classes, function) from common modules
+from Python. All imports from pylab.
 
-Liberate (polute?) your namespace with some basic modules, 
-classes and functions.
+Note that this will strongly polute your namespace and it should
+probably only be used in interactive programs
+
+Modules, classes and functions: 
+- base64, b64decode, b64encode, ...
+- BeautifulSoup
+- bz2
+- collections, Counter, defaultdict, ...
+- copy (module), deepcopy
+- ConfigParser
+- glob
+- json
+- pickle
+- re, findall, search, sub, subn
+- lxml.etree
+
+Conditional import (only if installed):
+- nltk, sent_tokenize, word_tokenize
+- pandas as pd, DataFrame, read_csv, read_excel, Series, ...
+- pylab (everything by 'from pylab import *')
 
 
-Modules, classes and functions
-------------------------------
-base64
-BeautifulSoup
-ConfigParser
-json
-pickle
-
-re, findall, search, sub, subn
+See also
+--------
+pylab : Module from matplotlib
 
 
-Conditional import (only if installed)
---------------------------------------
-nltk, sent_tokenize, word_tokenize
+Example
+-------
+>>> import everything
+>>> len(dir(everything)) > 140
+True
 
-pandas as pd, DataFrame, read_csv, Series
-
-pylab (everything by 'from pylab import *')
+>>> from everything import *
+>>> Counter(list(getcwd())).most_common(1)[0][1] > 0 
+True
 
 """
 
@@ -56,7 +72,8 @@ try:
 except ImportError:
     from configparser import ConfigParser
 
-from copy import copy, deepcopy
+import copy
+from copy import deepcopy
 
 from datetime import date, datetime, timedelta
 
@@ -159,6 +176,7 @@ import struct
 from struct import pack, unpack
 
 import sys
+from sys import stdin, stdout, stderr
 
 import time
 
