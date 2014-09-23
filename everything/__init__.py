@@ -97,7 +97,7 @@ from itertools import count, cycle, repeat, chain, dropwhile, groupby, \
 try:
     # Python 3 does not have these functions.
     from itertools import ifilter, ifilterfalse, imap, izip, izip_longest
-    zip_longest = izip_longest
+    zip_longest = lambda *args: list(izip_longest(*args))
 except ImportError:
     try:
         from itertools import zip_longest
@@ -123,6 +123,7 @@ try:
     acosh = arccosh
     acos = arccos
 except NameError:
+    import math
     from math import *
 
 try:
