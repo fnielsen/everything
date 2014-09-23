@@ -1,4 +1,4 @@
-"""Literate your namespace! Import many modules from Python. 
+"""Literate your namespace! Import many modules from Python.
 
 Description
 -----------
@@ -8,7 +8,7 @@ from Python. All imports from pylab.
 Note that this will strongly polute your namespace and it should
 probably only be used in interactive programs
 
-Modules, classes and functions: 
+Modules, classes and functions:
 - base64, b64decode, b64encode, ...
 - BeautifulSoup
 - bz2
@@ -39,7 +39,7 @@ Example
 True
 
 >>> from everything import *
->>> Counter(list(getcwd())).most_common(1)[0][1] > 0 
+>>> Counter(list(getcwd())).most_common(1)[0][1] > 0
 True
 
 """
@@ -111,7 +111,7 @@ import json
 
 # >>> import pylab, math
 # >>> set(dir(math)) - set(dir(pylab))
-# set(['asin', 'asinh', 'atanh', 'atan', 'atan2', 'factorial', 
+# set(['asin', 'asinh', 'atanh', 'atan', 'atan2', 'factorial',
 #      'pow', 'fsum', 'lgamma', 'erf', 'erfc', 'acosh', 'acos'])
 try:
     # Numpy's version should work on complex numbers so no need of cmath
@@ -136,7 +136,7 @@ from operator import attrgetter, itemgetter
 from os import chdir, chmod, getcwd, listdir, walk
 from os.path import abspath, basename, dirname, exists, expanduser, isdir, \
     isfile, islink, realpath, splitext
-from os.path import join as pjoin # maybe join? No apparent collisions
+from os.path import join as pjoin  # maybe join? No apparent collisions
 
 try:
     import pandas as pd
