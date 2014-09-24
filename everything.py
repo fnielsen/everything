@@ -64,6 +64,7 @@ except ImportError:
 
 import bz2
 
+import collections
 from collections import Container, Counter, defaultdict, deque, \
     Iterable, Mapping, namedtuple, OrderedDict, Sequence, Sized
 
@@ -109,6 +110,14 @@ except ImportError:
         raise
 
 import json
+
+try:
+    import networkx as nx
+    from networkx import DiGraph, Graph, MultiDiGraph, MultiGraph, \
+        closeness_centrality, closeness_vitality, connected_component_subgraphs, \
+        ego_graph
+except ImportError:
+    pass
 
 # >>> import pylab, math
 # >>> set(dir(math)) - set(dir(pylab))
