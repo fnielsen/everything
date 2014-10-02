@@ -23,6 +23,7 @@ Modules, classes and functions:
 - lxml.etree
 
 Conditional import (only if installed):
+- networkx
 - nltk, sent_tokenize, word_tokenize
 - pandas as pd, DataFrame, read_csv, read_excel, Series, ...
 - pylab (everything by 'from pylab import *')
@@ -112,14 +113,6 @@ except ImportError:
 
 import json
 
-try:
-    import networkx as nx
-    from networkx import DiGraph, Graph, MultiDiGraph, MultiGraph, \
-        closeness_centrality, closeness_vitality, connected_component_subgraphs, \
-        ego_graph
-except ImportError:
-    pass
-
 # >>> import pylab, math
 # >>> set(dir(math)) - set(dir(pylab))
 # set(['asin', 'asinh', 'atanh', 'atan', 'atan2', 'factorial',
@@ -136,6 +129,15 @@ try:
 except NameError:
     import math
     from math import *
+
+try:
+    import networkx as nx
+    from networkx import DiGraph, Graph, MultiDiGraph, MultiGraph, \
+        closeness_centrality, closeness_vitality, \
+        connected_component_subgraphs, \
+        ego_graph
+except ImportError:
+    pass
 
 try:
     import nltk
