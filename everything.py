@@ -19,6 +19,7 @@ Modules, classes and functions:
 - json
 - pickle
 - re, findall, search, sub, subn
+- subprocess
 - lxml.etree
 
 Conditional import (only if installed):
@@ -185,6 +186,9 @@ except ImportError:
 
 import struct
 from struct import pack, unpack
+
+import subprocess
+from subprocess import Popen, PIPE, STDOUT
 
 import sys
 from sys import stdin, stdout, stderr
