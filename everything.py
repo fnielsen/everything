@@ -23,6 +23,7 @@ Modules, classes and functions:
 - lxml.etree
 
 Conditional import (only if installed):
+- DB from db
 - networkx
 - nltk, sent_tokenize, word_tokenize
 - pandas as pd, DataFrame, read_csv, read_excel, Series, ...
@@ -80,6 +81,11 @@ from copy import deepcopy
 
 from datetime import date, datetime, timedelta
 
+try:
+    from db import DB
+except:
+    pass
+
 from decimal import Decimal
 
 from fnmatch import fnmatch, fnmatchcase
@@ -131,7 +137,7 @@ except NameError:
     from math import *
 
 try:
-    import networkx as nx
+    import nxetworkx as nx
     from networkx import DiGraph, Graph, MultiDiGraph, MultiGraph, \
         closeness_centrality, closeness_vitality, \
         connected_component_subgraphs, \
