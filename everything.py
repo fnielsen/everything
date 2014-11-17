@@ -1,4 +1,4 @@
-"""Literate your namespace! Import many modules from Python.
+"""Liberate your namespace! Import many modules from Python.
 
 Description
 -----------
@@ -137,7 +137,7 @@ except NameError:
     from math import *
 
 try:
-    import nxetworkx as nx
+    import networkx as nx
     from networkx import DiGraph, Graph, MultiDiGraph, MultiGraph, \
         closeness_centrality, closeness_vitality, \
         connected_component_subgraphs, \
