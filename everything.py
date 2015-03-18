@@ -28,6 +28,7 @@ Conditional import (only if installed):
 - nltk, sent_tokenize, word_tokenize
 - pandas as pd, DataFrame, read_csv, read_excel, Series, ...
 - pylab (everything by 'from pylab import *')
+- scipy
 
 
 See also
@@ -182,6 +183,12 @@ try:
     import requests
 except ImportError:
     # Should we import urllib?
+    pass
+
+try:
+    import scipy
+    from scipy.io import loadmat
+except ImportError:
     pass
 
 try:
