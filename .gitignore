@@ -53,5 +53,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# Emacs backup.
+# Emacs backup and other.
 *~
+.\#*
+\#*
