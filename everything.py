@@ -109,14 +109,12 @@ try:
     from itertools import ifilter, ifilterfalse, imap, izip, izip_longest
     zip_longest = izip_longest
 except ImportError:
-    try:
-        from itertools import zip_longest
-        ifilter = filter
-        izip_longest = zip_longest
-        izip = zip
-        imap = map
-    except ImportError:
-        raise
+    from itertools import zip_longest
+    ifilter = filter
+    izip_longest = zip_longest
+    izip = zip
+    imap = map
+
 
 import json
 
@@ -188,6 +186,7 @@ except ImportError:
 try:
     import scipy
     from scipy.io import loadmat
+    from scipy import stats
 except ImportError:
     pass
 
