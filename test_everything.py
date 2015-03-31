@@ -30,3 +30,14 @@ def test_nltk():
      except:
          # nltk not available on platform
          pass
+
+
+def test_scipy():
+     try:
+        imp.find_module('scipy')
+        assert 'scipy' in globals()
+        assert 'stats' in globals()
+        assert stats.norm(0, 1)
+     except:
+         # scipy not available on platform
+         pass
