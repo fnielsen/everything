@@ -11,7 +11,7 @@ except:
 
 setup(
     name='everything',
-    version='0.1.dev0', + version,
+    version='0.1.dev0' + version,
     author='Finn Aarup Nielsen',
     author_email='faan@dtu.dk',
     description='Import many modules',
