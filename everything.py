@@ -43,7 +43,10 @@ Example
 True
 
 >>> from everything import *
->>> Counter(list(getcwd())).most_common(1)[0][1] > 0
+>>> if (2, 7) <= sys.version_info[:2]:
+...     Counter(list(getcwd())).most_common(1)[0][1] > 0
+... else:
+...     True
 True
 
 """
@@ -69,8 +72,13 @@ except ImportError:
 import bz2
 
 import collections
-from collections import Container, Counter, defaultdict, deque, \
-    Iterable, Mapping, namedtuple, OrderedDict, Sequence, Sized
+from collections import Container, defaultdict, deque, \
+    Iterable, Mapping, namedtuple, Sequence, Sized
+try:
+    from collections import Counter, OrderedDict
+except ImportError:
+    # Python 2.6
+    pass
 
 try:
     from ConfigParser import ConfigParser
@@ -102,8 +110,12 @@ import heapq
 import itertools
 from itertools import count, cycle, repeat, chain, dropwhile, groupby, \
     islice, starmap, tee, takewhile, \
-    product, permutations, combinations, \
-    combinations_with_replacement
+    product, permutations, combinations
+try:
+    from itertools import combinations_with_replacement
+except ImportError:
+    # Python 2.6
+    pass
 try:
     # Python 3 does not have these functions.
     from itertools import ifilter, ifilterfalse, imap, izip, izip_longest
