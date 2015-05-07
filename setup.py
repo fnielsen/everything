@@ -1,8 +1,17 @@
 from setuptools import setup
+from subprocess import Popen, PIPE
+
+try: 
+    version, err = Popen(['git', 'describe', '--always'], 
+                         stdout=PIPE).communicate()
+    version = str(version).strip()
+except:
+    version = ''
+
 
 setup(
     name='everything',
-    version='0.1',
+    version='0.1.dev0', + version,
     author='Finn Aarup Nielsen',
     author_email='faan@dtu.dk',
     description='Import many modules',
