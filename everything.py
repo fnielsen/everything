@@ -185,6 +185,7 @@ except ImportError:
 
 try:
     import scipy
+    import scipy.fftpack
     from scipy.io import loadmat
     from scipy import stats
 except ImportError:
