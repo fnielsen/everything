@@ -8,7 +8,11 @@ from everything import *
 
 def test_collections():
     assert 'collections' in globals()
-    assert Counter([1, 2, 2]) == {1: 1, 2: 2}
+
+
+def test_collections_27():
+    if (2, 7) <= sys.version_info[:2]:
+        assert Counter([1, 2, 2]) == {1: 1, 2: 2}
 
 
 def test_itertools():
