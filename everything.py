@@ -107,6 +107,8 @@ import gzip
 
 import heapq
 
+from imp import find_module, load_module
+
 import itertools
 from itertools import count, cycle, repeat, chain, dropwhile, groupby, \
     islice, starmap, tee, takewhile, \
@@ -149,10 +151,10 @@ except NameError:
 
 try:
     import networkx as nx
-    from networkx import DiGraph, Graph, MultiDiGraph, MultiGraph, \
-        closeness_centrality, closeness_vitality, \
-        connected_component_subgraphs, \
-        ego_graph
+    from networkx import (DiGraph, Graph, MultiDiGraph, MultiGraph,
+                          closeness_centrality, closeness_vitality,
+                          connected_component_subgraphs,
+                          ego_graph)
 except ImportError:
     pass
 
@@ -162,17 +164,23 @@ try:
 except ImportError:
     pass
 
+try:
+    # Conditional import
+    import numpy as np
+except ImportError:
+    pass
+
 from operator import attrgetter, itemgetter
 
 from os import chdir, chmod, getcwd, listdir, walk
-from os.path import abspath, basename, dirname, exists, expanduser, isdir, \
-    isfile, islink, realpath, splitext
+from os.path import (abspath, basename, dirname, exists, expanduser, isdir,
+                     isfile, islink, realpath, splitext)
 from os.path import join as pjoin  # maybe join? No apparent collisions
 
 try:
     import pandas as pd
-    from pandas import DataFrame, read_excel, read_csv, \
-        Panel, Panel4D, Series
+    from pandas import (DataFrame, read_excel, read_csv,
+                        Panel, Panel4D, Series)
 except ImportError:
     pass
 
@@ -186,8 +194,8 @@ from pprint import pprint
 # re.compile should not hide __builtins__.compile
 # re.split should not hide split from pylab
 import re
-from re import DOTALL, findall, IGNORECASE, match, MULTILINE, \
-    search, sub, subn, UNICODE, VERBOSE
+from re import (DOTALL, findall, IGNORECASE, match, MULTILINE,
+                search, sub, subn, UNICODE, VERBOSE)
 
 try:
     import requests
@@ -200,6 +208,9 @@ try:
     import scipy.fftpack
     from scipy.io import loadmat
     from scipy import stats
+
+    # Pylab imports Numpy sqrt
+    from scipy import sqrt
 except ImportError:
     pass
 
