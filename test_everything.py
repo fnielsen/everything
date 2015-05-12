@@ -1,8 +1,6 @@
 """Testing everything.py module."""
 
 
-import imp
-
 from everything import *
 
 
@@ -27,7 +25,7 @@ def test_json():
 
 def test_networkx():
     try:
-        imp.find_module('networkx')
+        find_module('networkx')
     except ImportError: 
         # networkx not available on platform
         pass
@@ -37,7 +35,7 @@ def test_networkx():
 
 def test_nltk():
     try:
-        imp.find_module('nltk')
+        find_module('nltk')
     except ImportError:
         # nltk not available on platform
         pass
@@ -49,7 +47,7 @@ def test_nltk():
 
 def test_numpy():
     try:
-        imp.find_module('numpy')
+        find_module('numpy')
     except ImportError:
         pass
     else:
@@ -59,19 +57,18 @@ def test_numpy():
 
 def test_pandas():
     try:
-        imp.find_module('pandas')
+        find_module('pandas')
     except ImportError: 
         pass
     else:
         assert 'pd' in globals()
-        assert DataFrame([[1, 2], [3, 4]])
         assert DataFrame([[1, 2], [3, 4]]).ix[0, 0] == 1
         assert Series([1, 2]).ix[0] == 1
 
 
 def test_scipy():
     try:
-        imp.find_module('scipy')
+        find_module('scipy')
     except:
         # scipy not available on platform
         pass
@@ -79,3 +76,5 @@ def test_scipy():
         assert 'scipy' in globals()
         assert 'stats' in globals()
         assert stats.norm(0, 1)
+        assert sqrt(-1) == 1j
+
