@@ -174,8 +174,7 @@ from operator import attrgetter, itemgetter
 
 from os import chdir, chmod, getcwd, listdir, walk
 from os.path import (abspath, basename, dirname, exists, expanduser, isdir,
-                     isfile, islink, realpath, splitext)
-from os.path import join as pjoin  # maybe join? No apparent collisions
+                     isfile, islink, join, realpath, splitext)
 
 try:
     import pandas as pd
