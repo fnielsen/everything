@@ -15,3 +15,12 @@ Python3 (apropos https://twitter.com/wimlds/status/578678340699045888):
     <scipy.stats._distn_infrastructure.rv_frozen object at 0x7486090>
 
 (what an ugly name BTW)
+
+Example with NetworkX and NLTK functions:
+
+    >>> from everything import *
+    >>> import everything
+    >>> g = DiGraph()
+    >>> g.add_edges_from(bigrams(word_tokenize(open(everything.__file__.rstrip('c')).read())))
+    >>> nx.draw(g, with_labels=True)
+    >>> show()
