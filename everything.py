@@ -207,6 +207,9 @@ try:
     import scipy.fftpack
     from scipy.io import loadmat
     from scipy import stats
+    from scipy import signal
+    from scipy.signal import iirdesign, iirfilter
+    from scipy.spatial import ConvexHull
 
     # Pylab imports Numpy sqrt
     from scipy import sqrt
