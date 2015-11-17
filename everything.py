@@ -72,8 +72,8 @@ except ImportError:
 import bz2
 
 import collections
-from collections import Container, defaultdict, deque, \
-    Iterable, Mapping, namedtuple, Sequence, Sized
+from collections import (Container, Iterable, Mapping, Sequence,
+                         Sized, defaultdict, deque, namedtuple)
 try:
     from collections import Counter, OrderedDict
 except ImportError:
@@ -109,10 +109,11 @@ import heapq
 
 from imp import find_module, load_module
 
+# 'product' is already imported from pylab
 import itertools
-from itertools import count, cycle, repeat, chain, dropwhile, groupby, \
-    islice, starmap, tee, takewhile, \
-    product, permutations, combinations
+from itertools import (chain, combinations, count, cycle, dropwhile,
+                       groupby, islice, repeat, starmap,
+                       takewhile, tee)
 try:
     from itertools import combinations_with_replacement
 except ImportError:
@@ -193,8 +194,8 @@ from pprint import pprint
 # re.compile should not hide __builtins__.compile
 # re.split should not hide split from pylab
 import re
-from re import (DOTALL, findall, IGNORECASE, match, MULTILINE,
-                search, sub, subn, UNICODE, VERBOSE)
+from re import (DOTALL, IGNORECASE, MULTILINE, UNICODE, VERBOSE,
+                findall, match, search, sub, subn)
 
 try:
     import requests
@@ -228,10 +229,10 @@ import struct
 from struct import pack, unpack
 
 import subprocess
-from subprocess import Popen, PIPE, STDOUT
+from subprocess import PIPE, Popen, STDOUT
 
 import sys
-from sys import stdin, stdout, stderr
+from sys import stderr, stdin, stdout
 
 import time
 
