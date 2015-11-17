@@ -1,8 +1,13 @@
-from setuptools import setup
-from subprocess import Popen, PIPE
+"""Setup everything package."""
 
-try: 
-    version, err = Popen(['git', 'describe', '--always'], 
+
+from subprocess import PIPE, Popen
+
+from setuptools import setup
+
+
+try:
+    version, err = Popen(['git', 'describe', '--always'],
                          stdout=PIPE).communicate()
     version = str(version).strip()
 except:
@@ -24,7 +29,7 @@ setup(
         'Topic :: Utilities',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.2',
-        ],
+    ],
     tests_require=['pytest'],
     test_suite='py.test',
-    )
+)
