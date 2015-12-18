@@ -209,7 +209,7 @@ try:
     from scipy.io import loadmat
     from scipy import stats
     from scipy import signal
-    from scipy.signal import iirdesign, iirfilter
+    from scipy.signal import iirdesign, iirfilter, periodogram, welch
     from scipy.spatial import ConvexHull
 
     # Pylab imports Numpy sqrt
