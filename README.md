@@ -24,3 +24,8 @@ Example with NetworkX and NLTK functions:
     >>> g.add_edges_from(bigrams(word_tokenize(open(everything.__file__.rstrip('c')).read())))
     >>> nx.draw(g, with_labels=True)
     >>> show()
+    
+Travis et al.
+-------------
+.. image:: https://travis-ci.org/fnielsen/everything.svg?branch=master
+    :target: https://travis-ci.org/fnielsen/everything
