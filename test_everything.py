@@ -75,6 +75,11 @@ def test_scipy():
     else:
         assert 'scipy' in globals()
         assert 'stats' in globals()
+        assert 'signal' in globals()
+
         assert stats.norm(0, 1)
         assert sqrt(-1) == 1j
+        assert callable(welch)
+        assert callable(periodogram)
+
 
