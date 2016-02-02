@@ -25,10 +25,10 @@ Example with NetworkX and NLTK functions:
     >>> nx.draw(g, with_labels=True)
     >>> show()
 
-Interactive startup with `ipython`:
+Interactive startup with ipython::
 
-    ipython -i -m everything
-
+    $ ipython -i -m everything
+    
     In [1]: DiGraph()
     Out[1]: <networkx.classes.digraph.DiGraph at 0x7f7f3f92e6d0>
 
