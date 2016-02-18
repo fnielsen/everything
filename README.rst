@@ -25,6 +25,13 @@ Example with NetworkX and NLTK functions:
     >>> nx.draw(g, with_labels=True)
     >>> show()
 
+Example with Pandas and Scikit-learn:
+
+    >>> fig, axs = subplots(2, 2)
+    >>> for ax, (model, data) in zip(axs.flatten(), itertools.product([PCA(), TSNE()], [load_iris(), load_boston()])):
+    ...     DataFrame(model.fit_transform(data.data)).plot(x=0, y=1, kind='scatter', c=data.target / 2., ax=ax)
+    >>> show()
+
 Interactive startup with ipython::
 
     $ ipython -i -m everything
