@@ -228,7 +228,8 @@ try:
 except ImportError:
     pass
 else:
-    from sklearn.datasets import load_iris
+    from sklearn.datasets import (
+        load_boston, load_iris)
     from sklearn.decomposition import FactorAnalysis, NMF, PCA
     from sklearn.manifold import TSNE
 
