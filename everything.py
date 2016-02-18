@@ -6,7 +6,7 @@ Import many names (modules, classes, function) from common modules
 from Python. All imports from pylab.
 
 Note that this will strongly polute your namespace and it should
-probably only be used in interactive programs
+probably only be used in interactive programs.
 
 Modules, classes and functions:
 - base64, b64decode, b64encode, ...
@@ -15,7 +15,9 @@ Modules, classes and functions:
 - collections, Counter, defaultdict, ...
 - copy (module), deepcopy
 - ConfigParser
+- Decimal from decimal
 - glob
+- gzip
 - json
 - pickle
 - re, findall, search, sub, subn
@@ -29,6 +31,7 @@ Conditional import (only if installed):
 - pandas as pd, DataFrame, read_csv, read_excel, Series, ...
 - pylab (everything by 'from pylab import *')
 - scipy
+- sklearn (scikit-learn)
 
 
 See also
@@ -152,12 +155,12 @@ except NameError:
 
 try:
     import networkx as nx
-    from networkx import (DiGraph, Graph, MultiDiGraph, MultiGraph,
-                          closeness_centrality, closeness_vitality,
-                          connected_component_subgraphs,
-                          ego_graph)
 except ImportError:
     pass
+else:
+    from networkx import (
+        DiGraph, Graph, MultiDiGraph, MultiGraph, closeness_centrality,
+        closeness_vitality, connected_component_subgraphs, ego_graph)
 
 try:
     import nltk
@@ -179,10 +182,12 @@ from os.path import (abspath, basename, dirname, exists, expanduser, isdir,
 
 try:
     import pandas as pd
-    from pandas import (DataFrame, read_excel, read_csv,
-                        Panel, Panel4D, Series)
 except ImportError:
     pass
+else:
+    from pandas import (DataFrame, read_excel, read_csv,
+                        MultiIndex,
+                        Panel, Panel4D, Series)
 
 try:
     import cPickle as pickle
@@ -205,6 +210,9 @@ except ImportError:
 
 try:
     import scipy
+except ImportError:
+    pass
+else:
     import scipy.fftpack
     from scipy.io import loadmat
     from scipy import stats
@@ -214,8 +222,15 @@ try:
 
     # Pylab imports Numpy sqrt
     from scipy import sqrt
+
+try:
+    import sklearn     # scikit-learn
 except ImportError:
     pass
+else:
+    from sklearn.datasets import load_iris
+    from sklearn.decomposition import FactorAnalysis, NMF, PCA
+    from sklearn.manifold import TSNE
 
 try:
     from cStringIO import StringIO
