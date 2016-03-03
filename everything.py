@@ -231,6 +231,7 @@ else:
     from sklearn.datasets import (
         load_boston, load_iris)
     from sklearn.decomposition import FactorAnalysis, NMF, PCA
+    from sklearn.linear_model import LogisticRegression
     from sklearn.manifold import TSNE
 
 try:
