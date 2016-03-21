@@ -214,6 +214,10 @@ except ImportError:
     pass
 else:
     import scipy.fftpack
+    import scipy.io
+    import scipy.io.wavfile
+    import scipy.signal
+    import scipy.spatial
     from scipy.io import loadmat
     from scipy import stats
     from scipy import signal
