@@ -252,6 +252,11 @@ from struct import pack, unpack
 import subprocess
 from subprocess import PIPE, Popen, STDOUT
 
+try:
+    import sympy
+except ImportError:
+    pass
+
 import sys
 from sys import stderr, stdin, stdout
 
