@@ -235,8 +235,15 @@ else:
     from sklearn.datasets import (
         load_boston, load_iris)
     from sklearn.decomposition import FactorAnalysis, NMF, PCA
+    from sklearn.discriminant_analysis import (
+        LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
+    from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
     from sklearn.linear_model import LogisticRegression
     from sklearn.manifold import TSNE
+    from sklearn.naive_bayes import GaussianNB
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.svm import SVC
+    from sklearn.tree import DecisionTreeClassifier
 
 try:
     from cStringIO import StringIO
