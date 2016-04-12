@@ -154,6 +154,11 @@ except NameError:
     from math import *
 
 try:
+    from mpl_toolkits.mplot3d import Axes3D
+except ImportError:
+    pass
+
+try:
     import networkx as nx
 except ImportError:
     pass
@@ -164,9 +169,10 @@ else:
 
 try:
     import nltk
-    from nltk import bigrams, pos_tag, sent_tokenize, word_tokenize
 except ImportError:
     pass
+else:
+    from nltk import bigrams, pos_tag, sent_tokenize, word_tokenize
 
 try:
     # Conditional import
