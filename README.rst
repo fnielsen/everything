@@ -39,6 +39,12 @@ Interactive startup with ipython::
     In [1]: DiGraph()
     Out[1]: <networkx.classes.digraph.DiGraph at 0x7f7f3f92e6d0>
 
+Interactive startup with python::
+
+    $ python -i -c 'from everything import *'
+    >>> DiGraph()
+    <networkx.classes.digraph.DiGraph object at 0x7f498a54b8d0>
+
     
 Travis et al.
 -------------
