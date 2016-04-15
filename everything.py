@@ -238,8 +238,9 @@ try:
 except ImportError:
     pass
 else:
+    from sklearn.cluster import KMeans
     from sklearn.datasets import (
-        load_boston, load_iris)
+        load_boston, load_diabetes, load_digits, load_iris, load_linnerud)
     from sklearn.decomposition import FactorAnalysis, NMF, PCA
     from sklearn.discriminant_analysis import (
         LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
