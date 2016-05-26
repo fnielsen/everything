@@ -253,6 +253,11 @@ else:
     from sklearn.tree import DecisionTreeClassifier
 
 try:
+    import sparql
+except ImportError:
+    pass
+
+try:
     from cStringIO import StringIO
 except ImportError:
     try:
@@ -275,6 +280,7 @@ import sys
 from sys import stderr, stdin, stdout
 
 import time
+from time import sleep
 
 from timeit import timeit
 
