@@ -45,6 +45,13 @@ Interactive startup with python::
     >>> DiGraph()
     <networkx.classes.digraph.DiGraph object at 0x7f498a54b8d0>
 
+
+Command-line example
+--------------------
+`epython` shell script defined as:
+
+    python -i -c 'from everything import *'
+
     
 Travis et al.
 -------------
