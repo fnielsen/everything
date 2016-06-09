@@ -245,9 +245,11 @@ else:
     from sklearn.discriminant_analysis import (
         LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
     from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-    from sklearn.linear_model import LogisticRegression
+    from sklearn.linear_model import (
+        LogisticRegression, PassiveAggressiveRegressor, Perceptron,
+        SGDClassifier)
     from sklearn.manifold import TSNE
-    from sklearn.naive_bayes import GaussianNB
+    from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.svm import SVC
     from sklearn.tree import DecisionTreeClassifier
