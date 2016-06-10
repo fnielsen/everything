@@ -32,6 +32,13 @@ Example with Pandas and Scikit-learn:
     ...     DataFrame(model.fit_transform(data.data)).plot(x=0, y=1, kind='scatter', c=data.target / 2., ax=ax)
     >>> show()
 
+Machine learning algorithms with :code:`partial_fit` method
+
+    >>> import everything
+    >>> [name for name in dir(everything) if hasattr(everything.__dict__.get(name), 'partial_fit')]
+    ['BernoulliNB', 'GaussianNB', 'MiniBatchKMeans', 'MultinomialNB', 'PassiveAggressiveClassifier',
+    'PassiveAggressiveRegressor', 'Perceptron', 'SGDClassifier', 'SGDRegressor']
+
 Interactive startup with ipython::
 
     $ ipython -i -m everything
@@ -48,7 +55,7 @@ Interactive startup with python::
 
 Command-line example
 --------------------
-`epython` shell script defined as:
+:code:`epython` shell script defined as:
 
     python -i -c 'from everything import *'
 
