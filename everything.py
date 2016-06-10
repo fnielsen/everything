@@ -112,6 +112,8 @@ import heapq
 
 from imp import find_module, load_module
 
+import inspect
+
 # 'product' is already imported from pylab
 import itertools
 from itertools import (chain, combinations, count, cycle, dropwhile,
@@ -238,19 +240,26 @@ try:
 except ImportError:
     pass
 else:
-    from sklearn.cluster import KMeans
+    from sklearn.cluster import KMeans, MiniBatchKMeans
     from sklearn.datasets import (
-        load_boston, load_diabetes, load_digits, load_iris, load_linnerud)
+        load_boston, load_diabetes, load_digits, load_iris, load_linnerud,
+        make_circles, make_moons)
     from sklearn.decomposition import FactorAnalysis, NMF, PCA
     from sklearn.discriminant_analysis import (
         LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
     from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
     from sklearn.linear_model import (
-        LogisticRegression, PassiveAggressiveRegressor, Perceptron,
-        SGDClassifier)
+        BayesianRidge, ElasticNet, ElasticNetCV,
+        Lasso, LassoLars, LinearRegression, LogisticRegression,
+        MultiTaskLasso, OrthogonalMatchingPursuit,
+        PassiveAggressiveClassifier, PassiveAggressiveRegressor,
+        Perceptron, RANSACRegressor,
+        Ridge, RidgeClassifierCV, RidgeCV,
+        SGDClassifier, SGDRegressor, TheilSenRegressor)
     from sklearn.manifold import TSNE
     from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.preprocessing import PolynomialFeatures
     from sklearn.svm import SVC
     from sklearn.tree import DecisionTreeClassifier
 
