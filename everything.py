@@ -60,6 +60,8 @@ __author__ = 'Finn Aarup Nielsen'
 # We put this at the top. Do we get any collisions?
 try:
     from pylab import *
+    from pylab import (arcsin, arcsinh, arctanh, arctan, arctan2, arccosh,
+                       arccos)
 except ImportError:
     pass
 
@@ -241,6 +243,7 @@ except ImportError:
     pass
 else:
     from sklearn.cluster import KMeans, MiniBatchKMeans
+    from sklearn.cross_validation import train_test_split
     from sklearn.datasets import (
         load_boston, load_diabetes, load_digits, load_iris, load_linnerud,
         make_circles, make_moons)
