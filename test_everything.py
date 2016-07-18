@@ -83,3 +83,12 @@ def test_scipy():
         assert callable(periodogram)
 
 
+def test_sklearn():
+    try:
+        find_module('sklearn')
+    except:
+        pass
+    else:
+        assert 'KMeans' in globals()
+        
+        assert 'train_test_split' in globals()
