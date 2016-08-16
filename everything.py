@@ -262,8 +262,9 @@ else:
     from sklearn.manifold import TSNE
     from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
-    from sklearn.preprocessing import PolynomialFeatures
-    from sklearn.svm import SVC
+    from sklearn.preprocessing import (
+        Imputer, PolynomialFeatures, StandardScaler)
+    from sklearn.svm import (OneClassSVM, SVC)
     from sklearn.tree import DecisionTreeClassifier
 
 try:
