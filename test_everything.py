@@ -42,7 +42,7 @@ def test_nltk():
     else:
         assert 'nltk' in globals()
         assert word_tokenize('Hello world') == ['Hello', 'world']
-        assert bigrams([1, 2, 3]) == [(1, 2), (2, 3)]
+        assert list(bigrams([1, 2, 3])) == [(1, 2), (2, 3)]
 
 
 def test_numpy():
@@ -90,5 +90,6 @@ def test_sklearn():
         pass
     else:
         assert 'KMeans' in globals()
-        
+        assert 'Imputer' in globals()
+        assert 'StandardScaler' in globals()
         assert 'train_test_split' in globals()
