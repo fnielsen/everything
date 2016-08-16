@@ -11,7 +11,7 @@ Rational
 
 Functional, classes and other names needs to be imported in Python before we can use them (except for the builtins).
 In interactive data analysis rather than a "clean" namespace, you might want quick access to a range of names in Python.
-Pylab already provides access to many names in Numpy and Matplotlib. This module, called "everything" expand
+Pylab already provides access to many names in Numpy and Matplotlib. This module, called "everything", expands
 on Pylab including several other modules relevant for interactive data analysis of data scientists.
 
 The imports are conditional, i.e., a module is not imported if it is not installed.
