@@ -12,6 +12,7 @@ Modules, classes and functions:
 - base64, b64decode, b64encode, ...
 - BeautifulSoup
 - bz2
+- codecs
 - collections, Counter, defaultdict, ...
 - copy (module), deepcopy
 - ConfigParser
@@ -75,6 +76,8 @@ except ImportError:
     pass
 
 import bz2
+
+import codecs
 
 import collections
 from collections import (Container, Iterable, Mapping, Sequence,
