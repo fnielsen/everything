@@ -33,7 +33,8 @@ Conditional import (only if installed):
 - pylab (everything by 'from pylab import *')
 - scipy
 - sklearn (scikit-learn)
-
+- sparql
+- statsmodels
 
 See also
 --------
@@ -274,6 +275,14 @@ try:
     import sparql
 except ImportError:
     pass
+
+try:
+    import statsmodels
+except ImportError:
+    pass
+else:
+    import statsmodels.api as sm
+    import statsmodels.formula.api as smf    
 
 try:
     from cStringIO import StringIO
