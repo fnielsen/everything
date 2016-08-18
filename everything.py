@@ -282,7 +282,7 @@ except ImportError:
     pass
 else:
     import statsmodels.api as sm
-    import statsmodels.formula.api as smf    
+    import statsmodels.formula.api as smf
 
 try:
     from cStringIO import StringIO
