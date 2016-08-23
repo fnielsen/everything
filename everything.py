@@ -264,6 +264,7 @@ else:
         Ridge, RidgeClassifierCV, RidgeCV,
         SGDClassifier, SGDRegressor, TheilSenRegressor)
     from sklearn.manifold import TSNE
+    from sklearn.metrics import roc_curve
     from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.preprocessing import (
@@ -283,6 +284,7 @@ except ImportError:
 else:
     import statsmodels.api as sm
     import statsmodels.formula.api as smf
+    from statsmodels.imputation.mice import (MICE, MICEData)
 
 try:
     from cStringIO import StringIO
