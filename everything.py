@@ -190,9 +190,15 @@ except ImportError:
 
 from operator import attrgetter, itemgetter
 
+import os
 from os import chdir, chmod, getcwd, listdir, walk
 from os.path import (abspath, basename, dirname, exists, expanduser, isdir,
                      isfile, islink, join, realpath, splitext)
+try:
+    from os import scandir  # available in version 3.5
+except ImportError:
+    pass
+
 
 try:
     import pandas as pd
