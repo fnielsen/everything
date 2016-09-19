@@ -24,6 +24,8 @@ Modules, classes and functions:
 - re, findall, search, sub, subn
 - subprocess
 - lxml.etree
+- zipfile
+- zlib
 
 Conditional import (only if installed):
 - DB from db
@@ -317,5 +319,8 @@ try:
     from lxml import etree
 except ImportError:
     from xml import etree
+
+import zipfile
+from zipfile import ZipFile
 
 import zlib
