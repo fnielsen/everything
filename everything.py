@@ -263,6 +263,8 @@ else:
     from sklearn.discriminant_analysis import (
         LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
     from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+    from sklearn.feature_extraction.text import (
+        CountVectorizer, TfidfVectorizer)
     from sklearn.linear_model import (
         BayesianRidge, ElasticNet, ElasticNetCV,
         Lasso, LassoLars, LinearRegression, LogisticRegression,
