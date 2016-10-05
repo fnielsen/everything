@@ -207,7 +207,7 @@ try:
 except ImportError:
     pass
 else:
-    from pandas import (DataFrame, read_excel, read_csv,
+    from pandas import (DataFrame, read_csv, read_excel, read_html,
                         MultiIndex,
                         Panel, Panel4D, Series)
 
