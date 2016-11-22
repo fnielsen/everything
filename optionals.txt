@@ -1,14 +1,13 @@
 db.py
 lxml
-mpl_toolkits
+matplotlib
 networkx
 nltk
 numpy
 pandas
-pylab
 requests
 scipy
 sklearn
-sparql
+# sparql-client
 statsmodels>=0.8.0rc1
 sympy
