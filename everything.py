@@ -255,7 +255,6 @@ except ImportError:
     pass
 else:
     from sklearn.cluster import KMeans, MiniBatchKMeans
-    from sklearn.cross_validation import train_test_split
     from sklearn.datasets import (
         load_boston, load_diabetes, load_digits, load_iris, load_linnerud,
         make_circles, make_moons)
@@ -281,10 +280,20 @@ else:
         Imputer, PolynomialFeatures, StandardScaler)
     from sklearn.svm import (OneClassSVM, SVC)
     from sklearn.tree import DecisionTreeClassifier
+    try:
+        from sklearn.model_selection import train_test_split
+    except ImportError:
+        # "This module will be removed in 0.20."
+        from sklearn.cross_validation import train_test_split
+
 
 try:
     import sparql
 except ImportError:
+    pass
+except SyntaxError:
+    # sparql does not currently support python3 and generates a syntaxerror
+    # exception at exception lines.
     pass
 
 try:
