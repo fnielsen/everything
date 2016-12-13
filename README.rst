@@ -52,7 +52,8 @@ Machine learning algorithms with :code:`partial_fit` method::
     ['BernoulliNB', 'GaussianNB', 'MiniBatchKMeans', 'MultinomialNB', 'PassiveAggressiveClassifier',
     'PassiveAggressiveRegressor', 'Perceptron', 'SGDClassifier', 'SGDRegressor']
 
-Machine learning with `auto-sklearn <https://automl.github.io/auto-sklearn/>`_
+Machine learning with `auto-sklearn <https://automl.github.io/auto-sklearn/>`_ (requires Python3)
+
 .. code-block:: python
 		  
   >>> digits = load_digits()
