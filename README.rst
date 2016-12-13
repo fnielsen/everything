@@ -52,6 +52,18 @@ Machine learning algorithms with :code:`partial_fit` method::
     ['BernoulliNB', 'GaussianNB', 'MiniBatchKMeans', 'MultinomialNB', 'PassiveAggressiveClassifier',
     'PassiveAggressiveRegressor', 'Perceptron', 'SGDClassifier', 'SGDRegressor']
 
+Machine learning with `auto-sklearn <https://automl.github.io/auto-sklearn/>`_
+.. code-block:: python
+		  
+  >>> digits = load_digits()
+  >>> X, y = digits.data, digits.target
+  >>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
+  >>> automl = AutoSklearnClassifier(time_left_for_this_task=30)  # In a hurry
+  >>> automl.fit(X_train, y_train)
+  >>> y_hat = automl.predict(X_test)
+  >>> print("Accuracy score", sklearn.metrics.accuracy_score(y_test, y_hat))
+  Accuracy score 0.986666666667
+  
 Interactive startup with ipython::
 
     $ ipython -i -m everything
