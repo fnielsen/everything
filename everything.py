@@ -28,6 +28,7 @@ Modules, classes and functions:
 - zlib
 
 Conditional import (only if installed):
+- autosklearn (auto-sklearn)
 - DB from db
 - networkx
 - nltk, sent_tokenize, word_tokenize
@@ -68,6 +69,13 @@ try:
                        arccos)
 except ImportError:
     pass
+
+try:
+    import autosklearn
+except (ImportError, SyntaxError):
+    pass
+else:
+    from autosklearn.classification import AutoSklearnClassifier
 
 import base64
 from base64 import b16decode, b16encode, b32decode, b32encode, \
