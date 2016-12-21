@@ -72,10 +72,10 @@ except ImportError:
 
 try:
     import autosklearn
-except (ImportError, SyntaxError):
-    pass
-else:
     from autosklearn.classification import AutoSklearnClassifier
+except (ImportError, SyntaxError):
+    # Auto-sklearn uses smac that generates a syntax error in Python2
+    pass
 
 import base64
 from base64 import b16decode, b16encode, b32decode, b32encode, \
