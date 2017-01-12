@@ -19,6 +19,7 @@ Modules, classes and functions:
 - Decimal from decimal
 - glob
 - gzip
+- importlib/imp
 - json
 - pickle
 - re, findall, search, sub, subn
@@ -126,7 +127,14 @@ import gzip
 
 import heapq
 
-from imp import find_module, load_module
+try:
+    # >= Python3.4
+    from importlib import find_module, load_module, reload
+except ImportError:
+    # python2 and <=python3.3
+    # "Deprecated since version 3.4"
+    # https://docs.python.org/3/library/imp.html
+    from imp import find_module, load_module, reload
 
 import inspect
 
