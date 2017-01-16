@@ -277,6 +277,7 @@ else:
     from sklearn.decomposition import FactorAnalysis, NMF, PCA
     from sklearn.discriminant_analysis import (
         LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
+    from sklearn.dummy import DummyClassifier, DummyRegressor
     from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
     from sklearn.feature_extraction.text import (
         CountVectorizer, TfidfVectorizer)
