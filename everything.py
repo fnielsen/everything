@@ -77,6 +77,10 @@ try:
 except (ImportError, SyntaxError):
     # Auto-sklearn uses smac that generates a syntax error in Python2
     pass
+except:
+    # IncorrectPackageVersionError
+    # TODO
+    pass
 
 import base64
 from base64 import b16decode, b16encode, b32decode, b32encode, \
@@ -281,6 +285,7 @@ else:
     from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
     from sklearn.feature_extraction.text import (
         CountVectorizer, TfidfVectorizer)
+    from sklearn.gaussian_process import GaussianProcessClassifier
     from sklearn.linear_model import (
         BayesianRidge, ElasticNet, ElasticNetCV,
         Lasso, LassoLars, LinearRegression, LogisticRegression,
