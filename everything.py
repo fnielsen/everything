@@ -349,6 +349,12 @@ except ImportError:
 import sys
 from sys import stderr, stdin, stdout
 
+try:
+    import tensorflow as tf
+    # from tensorflow.contrib.learn.python.learn import DNNClassifier
+except ImportError:
+    pass
+
 import time
 from time import sleep
 
