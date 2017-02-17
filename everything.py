@@ -202,7 +202,7 @@ try:
 except ImportError:
     pass
 else:
-    from nltk import bigrams, pos_tag, sent_tokenize, word_tokenize
+    from nltk import bigrams, ngrams, pos_tag, sent_tokenize, word_tokenize
 
 try:
     # Conditional import
