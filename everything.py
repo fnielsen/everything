@@ -300,7 +300,7 @@ else:
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.preprocessing import (
         Imputer, PolynomialFeatures, StandardScaler)
-    from sklearn.svm import (OneClassSVM, SVC)
+    from sklearn.svm import (LinearSVC, OneClassSVM, SVC)
     from sklearn.tree import DecisionTreeClassifier
     try:
         from sklearn.model_selection import train_test_split
