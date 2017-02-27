@@ -300,6 +300,7 @@ else:
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.preprocessing import (
         Imputer, PolynomialFeatures, StandardScaler)
+    from sklearn.semi_supervised import (LabelPropagation, LabelSpreading)
     from sklearn.svm import (LinearSVC, OneClassSVM, SVC)
     from sklearn.tree import DecisionTreeClassifier
     try:
