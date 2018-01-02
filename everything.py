@@ -1,7 +1,5 @@
 """Liberate your namespace! Import many modules from Python.
 
-Description
------------
 Import many names (modules, classes, function) from common modules
 from Python. All imports from pylab.
 
@@ -40,13 +38,14 @@ Conditional import (only if installed):
 - sparql
 - statsmodels
 
-See also
+
+See Also
 --------
 pylab : Module from matplotlib
 
 
-Example
--------
+Examples
+--------
 >>> import everything
 >>> len(dir(everything)) > 140
 True
@@ -236,7 +235,7 @@ try:
 except ImportError:
     import pickle
 
-from pprint import pprint
+from pprint import pformat, pprint
 
 # re.compile should not hide __builtins__.compile
 # re.split should not hide split from pylab
@@ -294,7 +293,7 @@ else:
         Perceptron, RANSACRegressor,
         Ridge, RidgeClassifierCV, RidgeCV,
         SGDClassifier, SGDRegressor, TheilSenRegressor)
-    from sklearn.manifold import TSNE
+    from sklearn.manifold import (Isomap, TSNE)
     from sklearn.metrics import roc_curve
     from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
