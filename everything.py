@@ -277,13 +277,13 @@ else:
     from sklearn.datasets import (
         load_boston, load_diabetes, load_digits, load_iris, load_linnerud,
         make_circles, make_moons)
-    from sklearn.decomposition import FactorAnalysis, NMF, PCA
+    from sklearn.decomposition import FactorAnalysis, NMF, PCA, TruncatedSVD
     from sklearn.discriminant_analysis import (
         LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis)
     from sklearn.dummy import DummyClassifier, DummyRegressor
     from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
     from sklearn.feature_extraction.text import (
-        CountVectorizer, TfidfVectorizer)
+        CountVectorizer, TfidfTransformer, TfidfVectorizer)
     from sklearn.gaussian_process import GaussianProcessClassifier
     from sklearn.linear_model import (
         BayesianRidge, ElasticNet, ElasticNetCV,
@@ -294,7 +294,8 @@ else:
         Ridge, RidgeClassifierCV, RidgeCV,
         SGDClassifier, SGDRegressor, TheilSenRegressor)
     from sklearn.manifold import (Isomap, TSNE)
-    from sklearn.metrics import roc_curve
+    from sklearn.metrics import (
+        accuracy_score, auc, precision_recall_curve, roc_curve)
     from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.preprocessing import (
