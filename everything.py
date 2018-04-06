@@ -76,7 +76,7 @@ try:
 except (ImportError, SyntaxError):
     # Auto-sklearn uses smac that generates a syntax error in Python2
     pass
-except:
+except Exception:
     # IncorrectPackageVersionError
     # TODO
     pass
@@ -115,7 +115,7 @@ from datetime import date, datetime, timedelta
 
 try:
     from db import DB
-except:
+except ImportError:
     pass
 
 from decimal import Decimal
