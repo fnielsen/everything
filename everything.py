@@ -295,7 +295,8 @@ else:
         SGDClassifier, SGDRegressor, TheilSenRegressor)
     from sklearn.manifold import (Isomap, TSNE)
     from sklearn.metrics import (
-        accuracy_score, auc, precision_recall_curve, roc_curve)
+        accuracy_score, auc, average_precision_score, precision_recall_curve,
+        roc_curve)
     from sklearn.naive_bayes import (BernoulliNB, GaussianNB, MultinomialNB)
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.preprocessing import (
