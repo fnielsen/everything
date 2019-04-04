@@ -227,8 +227,7 @@ except ImportError:
     pass
 else:
     from pandas import (DataFrame, read_csv, read_excel, read_html,
-                        MultiIndex,
-                        Panel, Panel4D, Series)
+                        MultiIndex, Series)
 
 try:
     import cPickle as pickle
